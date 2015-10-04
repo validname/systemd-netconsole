@@ -1,0 +1,4 @@
+src/
+pkg/
+systemd-netconsole/
+*.tar.xz
