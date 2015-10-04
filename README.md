@@ -6,6 +6,7 @@ methods to load console doesn't work (such as module options via configuration
 of kernel parameters). Or if you have a network bridge on your interfaces.
 
 Example:
+
 ```
 # dmesg | less
 ...
@@ -21,10 +22,11 @@ Example:
 All configuration parameters and their descriptions are stored in the
 /etc/default/netconsole file.
 
-# Simple use
+## Simple use
 
 If you already have confuguration file in the /etc/modprobe.d with netconsole
 options, then just copy them to /etc/default/netconsole.
+
 ```bash
 # cat /etc/modprobe.d/netconsole.conf
 options netconsole netconsole=6655@192.168.0.100/eno1,6666@192.168.0.1/00:01:21:d9:10:2c
@@ -38,9 +40,10 @@ NETCONSOLE_DST_PORT=6666
 NETCONSOLE_DST_MAC="00:01:21:d9:10:2c"
 ```
 
-# Advanced use
+## Advanced use
 
 Automate previous example as much as possible.
+
 ```bash
 # cat /etc/default/netconsole
 NETCONSOLE_IF="eno1"
@@ -52,6 +55,7 @@ NETCONSOLE_DST_MAC="auto"
 ```
 
 Broadcast kernel messages to local network.
+
 ```bash
 # cat /etc/default/netconsole
 NETCONSOLE_IF="eno1"
@@ -62,10 +66,11 @@ NETCONSOLE_DST_PORT=6666
 NETCONSOLE_DST_MAC=""
 ```
 
-# Expirienced use
+## Expirienced use
 
 Broadcast kernel messages to local networks from all interfaces
 which has configured IPv4 address.
+
 ```bash
 # cat /etc/default/netconsole
 NETCONSOLE_IF="auto"
