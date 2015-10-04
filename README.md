@@ -1,5 +1,5 @@
 # systemd-netconsole
-Loads netconsole kernel module with support of all already initialized interfaces.
+Loads netconsole kernel module and configures it via dynamic configuration.
 
 Use this systemd unit when your network card very slow initilizes and standard
 methods to load console doesn't work (such as module options via configuration
