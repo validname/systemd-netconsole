@@ -1,0 +1,29 @@
+# Interface to send messages from. 
+# Set it to 'auto' to use netconsole on all network interfaces (it only may be
+# usefull when your NETCONSOLE_DST_IP is set to 'broadcast').
+# In the 'auto' mode all '/32' addresses and 'lo' interface will be skipped.
+# Warning! Multiple address doesn't detected and netconsole will just send
+# multiple messages from the first IP address.
+NETCONSOLE_IF="auto"
+
+# Source/local IP to send messages from.
+# Setting it to 'no' leaves empty source ip and port.
+# Set to 'auto' to use address configured on the NETCONSOLE_IF interface.
+NETCONSOLE_SRC_IP="no"
+
+# Source/local IP port.
+NETCONSOLE_SRC_PORT=
+
+# Destination/remote IP to send messages to.
+# Set it to 'broadcast' to use broadcast messaging (remote MAC address will
+# be set to 'ff:ff:ff:ff:ff:ff')
+# Warning! Only IPv4 addresses and netmasks are supported.
+NETCONSOLE_DST_IP="broadcast"
+
+# Destination/remote IP port.
+NETCONSOLE_DST_PORT=6666
+
+# Destination/remote MAC address
+# Set it to 'auto' to determine remote MAC address automatically from it's IP.
+NETCONSOLE_DST_MAC=""
+
